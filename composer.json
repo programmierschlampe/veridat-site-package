@@ -8,7 +8,7 @@
 			"name": "Gerhard Huber",
 			"role": "Developer",
 			"email": "office@ids.co.at",
-			"homepage": "ids.co.at"
+			"homepage": "https://ids.co.at"
 		}
 	],
 	"require": {
@@ -16,8 +16,8 @@
 		"typo3/cms-core": "^10 || ^11"
 	},
 	"extra": {
-		"typo3/cms": {
-			"extension-key": "veridat-site-package"
-		}
+	   "typo3/cms": {
+		  "extension-key": "veridat-site-package"
+	   }
 	}
 }
