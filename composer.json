@@ -1,0 +1,16 @@
+{
+	"name": "ids-co-at/veridat-site-package",
+	"type": "typo3-cms-extension",
+	"description": "Sitepackage for website www.veridat.io.",
+	"homepage": "https://ids.co.at/",
+	"authors": [
+		{
+			"name": "Gerhard Huber",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=7.4.0",
+		"typo3/cms-core": "^10||^11"
+	}
+}
