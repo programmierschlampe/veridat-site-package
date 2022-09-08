@@ -11,7 +11,6 @@ $EM_CONF[$_EXTKEY] = [
     'title' => 'Sitepackage for website www.veridat.io',
     'description' => 'Site Package with Scripts, Templates and Resources ',
     'category' => 'templates',
-    'version' => '11.0.2',
     'state' => 'stable',
     'author' => 'Ing. Gerhard Huber <ids.co.at>',
     'author_email' => 'office@ids.co.at',
@@ -29,5 +28,6 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'uploadfolder' => 0,
     'createDirs' => '',
-    'clearCacheOnLoad' => 1
+    'clearCacheOnLoad' => 1,
+    'version' => '11.0.2',
 ];
