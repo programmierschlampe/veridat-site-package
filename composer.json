@@ -6,11 +6,18 @@
 	"authors": [
 		{
 			"name": "Gerhard Huber",
-			"role": "Developer"
+			"role": "Developer",
+			"email": "office@ids.co.at",
+			"homepage": "ids.co.at"
 		}
 	],
 	"require": {
 		"php": ">=7.4.0",
-		"typo3/cms-core": "^11"
+		"typo3/cms-core": "^10 || ^11"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "veridat-site-package"
+		}
 	}
 }

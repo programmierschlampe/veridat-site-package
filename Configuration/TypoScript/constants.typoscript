@@ -1,0 +1,9 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+page {
+  fluidtemplate {
+    layoutRootPath = EXT:veridat_site_package/Resources/Private/Layouts/
+    partialRootPath = EXT:veridat_site_package/Resources/Private/Partials/
+    templateRootPath = EXT:veridat_site_package/Resources/Private/Templates/
+  }
+}

@@ -1,0 +1,132 @@
+/**
+ * TYPO3 Extension "AWS Getting Started Screen"
+ *
+ * Author: Michael Schams <schams.net>
+ * https://t3rrific.com/typo3-on-aws/
+ */
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+p,
+.alert {
+	font-size: 1.2rem;
+}
+
+.navbar {
+	background-color: #ff8700;
+}
+.navbar .navbar-brand {
+	color: white;
+}
+
+.navbar .nav-link {
+	color: black;
+}
+
+.navbar .nav-link i.fas {
+	margin-right: .4rem;
+}
+
+.masthead {
+	background-color: white;
+	padding-top: 4rem;
+	min-height: 100vh;
+}
+
+.masthead img.logo {
+	width: 160px;
+	height: 160px;
+}
+
+.masthead h1 {
+	font-family: 'Doppio One', sans-serif;
+	font-weight: bold;
+	font-size: 3rem;
+	color: #444444;
+}
+
+.masthead p {
+	font-size: 1.4rem;
+}
+
+.masthead p .btn-typo3 {
+	margin-left: 0.6rem;
+}
+
+.masthead .card-body {
+	min-height: 12rem;
+}
+
+.masthead .card-body .card-text {
+	font-size: 1.2rem;
+}
+
+.masthead .card-footer {
+	background-color: unset;
+	border-top: none;
+}
+/*
+ .masthead {
+	padding-top: calc(6rem + 74px);
+	padding-bottom: 6rem;
+}
+*/
+
+.section {
+	min-height: 100vh;
+	padding-top: 2rem;
+}
+
+.section.access-details {
+	background-color: #eeeeee;
+}
+
+.section.documentation {
+	background-color: #dddddd;
+}
+
+.section.backend-login {
+	background-color: white;
+}
+
+.section.documentation img.logo {
+	margin: 0 auto;
+}
+
+.btn-typo3 {
+	color: #eeeeee;
+	font-weight: bold;
+	background-color: #ff8700;
+	border-color: #ff8700;
+}
+
+.btn-typo3:hover {
+	color: white;
+}
+
+code {
+	color: #444444;
+	font-weight: bold;
+	padding-right: 0.5rem;
+	padding-left: 0.5rem;
+}
+
+pre {
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	padding: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+}
+
+.bg-orange {
+	background-color: #ff8700;
+}
+
+.bg-grey {
+	background-color: #f2f4f4;
+}

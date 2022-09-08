@@ -1,3 +1,0 @@
-page = PAGE
-page.1 = FLUIDTEMPLATE
-page.1.file = EXT:site_package/Resources/Private/Templates/veridat.io/base.html
