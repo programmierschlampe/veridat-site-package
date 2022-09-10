@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+    <header class="header fixed-top" id="header">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a class="logo d-flex align-items-center" href="/">
+                <f:image src="EXT:veridat-site-package/Resources/Public/img/v_logo.png" alt="veridat.io logo" />
+            </a>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="#contact">Talk to Sales</a></li>
+                    <li><a class="nav-link scrollto" href="#recent-blog-posts">News</a></li>
+                    <li><a class="nav-link scrollto" href="#values">Features</a></li>
+                    <li><a class="getstarted scrollto" href="https://bench.veridat.io/login" target="_blank">Log in</a></li>
+                </ul>
+            </nav>
+            <!-- .navbar -->
+        </div>
+    </header>
+    <section class="hero d-flex align-items-center" id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <h1 data-aos="fade-up">Trust as a Service</h1>
+                    <h2 data-aos="fade-up" data-aos-delay="400">Simple APIs that add a layer of trust to your workflow and enhance data integrity through distributed ledger technology</h2>
+                    <div data-aos="fade-up" data-aos-delay="600">
+                        <div class="text-center text-lg-start"><a class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center" href="#contact"><span>Get In Touch</span> </a></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                    <f:image src="EXT:veridat-site-package/Resources/Public/img/services.png" class="img-fluid" alt="services" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+<f:spaceless>
+    <f:cObject typoscriptObjectPath="lib.content" />
+</f:spaceless>
+
+<footer class="footer" id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4 footer-info"><a class="logo d-flex align-items-center" href="index.html"><img alt="" src="img/v_logo.png" /> </a></div>
+                <div class="col-md-8">
+                    <div class="copyright">&copy; 2021 Veridat, LLC. <span><a href="privacy-policy.html">Privacy Policy </a></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

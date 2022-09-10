@@ -1,31 +1,143 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
 
+lib.fluidContent.templateRootPaths.30 = EXT:veridat-site-package/Resources/Private/Templates/
+lib.fluidContent.partialRootPaths.30 = EXT:veridat-site-package/Resources/Private/Partials/
+lib.fluidContent.layoutRootPaths.30 = EXT:veridat-site-package/Resources/Private/Layouts/
+lib.contentElement.templateRootPaths.30 = EXT:veridat-site-package/Resources/Private/Templates/
+lib.contentElement.partialRootPaths.30 = EXT:veridat-site-package/Resources/Private/Partials/
+lib.contentElement.layoutRootPaths.30 = EXT:veridat-site-package/Resources/Private/Layouts/
+
+# -------------
+# pagerendering
+# -------------
+lib.content < styles.content.get
+
 page = PAGE
 page {
   typeNum = 0
 
+  meta.viewport = width=device-width, initial-scale=1.0
+  headerData {
+    10 = TEXT
+    10.data = path:EXT:veridat-site-package/Resources/Public/img/favicon.png
+    10.wrap = <link href="|" rel="icon" />
+    20 = TEXT
+    20.data = path:EXT:veridat-site-package/Resources/Public/img/apple-touch-icon.png
+    20.wrap = <link href="|" rel="icon" />
+  }
+
+  includeCSS {
+    googleFont = https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap
+    googleFont.external = 1
+    bootstrapmin = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css
+    bootstrapmin.external = 1
+    bootstrapmin.integrity = sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC
+    bootstrapmin.crossorigin = anonymous
+    bootstrapicons = https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css
+    bootstrapicons.external = 1
+    remixicon = EXT:veridat-site-package/Resources/Public/css/remixicon.css
+    swiperbundle = https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css
+    swiperbundle.external = 1
+    glightbox = https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
+    glightbox.external = 1
+    owlcarousel = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css
+    owlcarousel.external = 1
+    custom = EXT:veridat-site-package/Resources/Public/css/custom.css
+  }
+
+  includeJS {
+    recaptcha = https://www.google.com/recaptcha/api.js
+    recaptcha.external = 1
+    recaptcha.async = 1
+    recaptcha.defer = 1
+  }
+
+  includeJSFooter {
+    jquery = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js
+    jquery.external = 1
+    owlcarousel = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js
+    owlcarousel.external = 1
+    fontawesome = https://use.fontawesome.com/826a7e3dce.js
+    fontawesome.external = 1
+    matchheight = https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js
+    matchheight.external = 1
+    bootstrapbundle = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+    bootstrapbundle.external = 1
+    bootstrapbundle.integrity = sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM
+    bootstrapbundle.crossorigin = anonymous
+    swiper = https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js
+    swiper.external = 1
+    purecounter = https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js
+    purecounter.external = 1
+    isotope = https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js
+    isotope.external = 1
+    glightbox = https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js
+    glightbox.external = 1
+    validate = EXT:veridat-site-package/Resources/Public/js/validate.js
+    main = EXT:veridat-site-package/Resources/Public/js/main.js
+  }
+
+  jsInline {
+    10 = TEXT
+    10.value
+    20 = TEXT
+    20.value = $('.owl-carousel').owlCarousel({
+    30 = TEXT
+    30.value = loop: true,
+    40 = TEXT
+    40.value = margin: 25,
+    50 = TEXT
+    50.value = nav: true,
+    60 = TEXT
+    60.value = navText: [
+    70 = TEXT
+    70.value = "<i class='fa fa-caret-left'></i>",
+    80 = TEXT
+    80.value = "<i class='fa fa-caret-right'></i>"
+    90 = TEXT
+    90.value = ],
+    100 = TEXT
+    100.value = autoplay: true,
+    110 = TEXT
+    110.value = autoplayHoverPause: true,
+    120 = TEXT
+    120.value = responsive: {
+    130 = TEXT
+    130.value = 0: {
+    140 = TEXT
+    140.value = items: 1
+    150 = TEXT
+    150.value = },
+    160 = TEXT
+    160.value = 600: {
+    170 = TEXT
+    170.value = items: 2
+    180 = TEXT
+    180.value = },
+    190 = TEXT
+    190.value = 1000: {
+    200 = TEXT
+    200.value = items: 4
+    210 = TEXT
+    210.value = }
+    220 = TEXT
+    220.value = },
+    230 = TEXT
+    230.value = onInitialize: function() {
+    240 = TEXT
+    240.value = $('.post-box').matchHeight();
+    250 = TEXT
+    250.value = }
+    260 = TEXT
+    260.value = })
+  }
+
   10 = FLUIDTEMPLATE
   10 {
-    templateRootPaths {
-      30 = EXT:veridat_site_package/Resources/Private/Templates/
-      31 = {$page.fluidtemplate.templateRootPath}
-    }
-    partialRootPaths {
-      30 = EXT:veridat_site_package/Resources/Private/Partials/
-      31 = {$page.fluidtemplate.partialRootPath}
-    }
-    layoutRootPaths {
-      30 = EXT:veridat_site_package/Resources/Private/Layouts/
-      31 = {$page.fluidtemplate.layoutRootPath}
-    }
-
-#    templateName = TEXT
-#    templateName.stdWrap.cObject = CASE
-#    templateName.stdWrap.cObject {
-#      key.data = pagelayout
-#      default = TEXT
-#      default.value = Content
-#    }
+    templateRootPaths < lib.fluidContent.templateRootPaths 
+    partialRootPaths < lib.fluidContent.partialRootPaths
+    layoutRootPaths < lib.fluidContent.layoutRootPaths
+    file = EXT:veridat-site-package/Resources/Private/Templates/Base.html
 
     variables {
       hostname = TEXT
@@ -34,44 +146,6 @@ page {
     }
   }
 
-  includeCSS {
-    bootstrap = https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css
-    bootstrap.integrity = sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2
-    bootstrap.external = 1
-
-    fontawesome = https://use.fontawesome.com/releases/v5.9.0/css/all.css
-    fontawesome.integrity = sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E
-    fontawesome.external = 1
-
-    googleFont = https://fonts.googleapis.com/css2?family=Doppio+One&family=Source+Sans+Pro&display=swap
-    googleFont.external = 1
-    
-    #fullPage = EXT:veridat_site_package/Resources/Public/Css/fullpage.min.css
-    custom = EXT:veridat_site_package/Resources/Public/Css/custom.css
-  }
-
-  includeJSFooter {
-    # jquerySlim = https://code.jquery.com/jquery-3.5.1.slim.min.js
-    # jquerySlim.integrity = sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=
-    # jquerySlim.external = 1
-
-    jquery = https://code.jquery.com/jquery-3.5.1.min.js
-    jquery.integrity = sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=
-    jquery.external = 1
-
-    jqueryEasing = EXT:veridat_site_package/Resources/Public/JavaScript/jquery.easing.min.js
-    
-    popper = https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js
-    popper.integrity = sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN
-    popper.external = 1
-    
-    bootstrap = https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js
-    bootstrap.integrity = sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s
-    bootstrap.external = 1
-    
-    #fullPage = EXT:veridat_site_package/Resources/Public/JavaScript/fullpage.min.js
-    custom = EXT:veridat_site_package/Resources/Public/JavaScript/custom.js
-  }
 }
 
 config {
