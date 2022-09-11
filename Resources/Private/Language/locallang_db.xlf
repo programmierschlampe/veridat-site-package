@@ -36,6 +36,33 @@
    			<trans-unit id="carousel.wizard.description">
 				<source>Element to add a Carousel Content Element</source>
 			</trans-unit>
+
+   			<trans-unit id="tx_veridat_domain_model_carouselitem">
+				<source>Carousel Item</source>
+			</trans-unit>
+   			<trans-unit id="tx_veridat_domain_model_carouselitem.image">
+				<source>Image</source>
+			</trans-unit>
+
+   			<trans-unit id="tx_veridat_domain_model_valuerow">
+				<source>Value Row</source>
+			</trans-unit>
+   			<trans-unit id="tx_veridat_domain_model_valuerow.addNewRecord">
+				<source>Add Value Box</source>
+			</trans-unit>
+   			<trans-unit id="tx_veridat_domain_model_valuerow.selected_valueboxes">
+				<source>Value Boxes</source>
+			</trans-unit>
+
+   			<trans-unit id="tx_veridat_domain_model_valuebox">
+				<source>Value Box</source>
+			</trans-unit>
+   			<trans-unit id="tx_veridat_domain_model_valuebox.image">
+				<source>Image</source>
+			</trans-unit>
+
+
+
 		</body>
 	</file>
 </xliff>
