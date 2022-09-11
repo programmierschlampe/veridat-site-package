@@ -1,12 +1,16 @@
+#
+# Table structure for extension 
+#
+
 CREATE TABLE pages (
 	contactform smallint(5) DEFAULT '0',
 ); 
 
 CREATE TABLE tt_content (
     backgroundimage int(11) unsigned NOT NULL DEFAULT '0',
-    selected_valuerows int(11) unsigned DEFAULT '0' NOT NULL,
-    selected_carouselitems int(11) unsigned DEFAULT '0' NOT NULL,
-};
+    selected_valuerows int(11) unsigned NOT NULL DEFAULT '0',
+    selected_carouselitems int(11) unsigned NOT NULL DEFAULT '0',
+);
 
 CREATE TABLE tx_veridat_domain_model_valuerow (
     uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
