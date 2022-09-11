@@ -19,13 +19,20 @@ $EM_CONF[$_EXTKEY] = [
         'depends' => [
             'php' => '7.4.0-7.4.99',
             'typo3' => '11.0.0-11.5.99',
-            'fluid_styled_content' => '11.4.0-11.5.99'
+            'fluid' => '11.4.0-11.5.99',
+            'fluid_styled_content' => '11.4.0-11.5.99',
+            'rte_ckeditor' => '11.4.0-11.5.99'
 		],
         'conflicts' => [
         ],
         'suggests' => [
         ]
     ],
+	'autoload' => [
+		'psr-4' => [
+			'IDS\\VeridatSitePackage\\' => 'Classes'
+		]
+	],
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 1,11.0.

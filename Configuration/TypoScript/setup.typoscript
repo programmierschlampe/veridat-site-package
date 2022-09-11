@@ -144,6 +144,13 @@ page {
       hostname.stdWrap.data = getIndpEnv:HTTP_HOST
       hostname.stdWrap.htmlSpecialChars = 1
     }
+    settings {
+      # Get the copyright year from a TypoScript constant.
+      companyname = {$company.name}
+      companyaddressline1 = {$company.addressline1}
+      companyaddressline2 = {$company.addressline2}
+      companyemail = {$company.email}
+   }
   }
 
 }

@@ -1,0 +1,45 @@
+# --------------------------
+# New Content Element Wizard
+# --------------------------
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        hero {
+            iconIdentifier = content-hero
+            title = LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xlf:hero.wizard.title
+            description = LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xlf:hero.wizard.description
+            tt_content_defValues {
+                CType = hero
+            }
+        }
+   }
+   show := addToList(hero)}
+}
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        values {
+            iconIdentifier = content-values
+            title = LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xlf:values.wizard.title
+            description = LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xlf:values.wizard.description
+            tt_content_defValues {
+                CType = values
+            }
+        }
+    }
+   show := addToList(values)}
+}
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        caruosel {
+            iconIdentifier = content-carousel
+            title = LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xlf:carousel.wizard.title
+            description = LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xlf:carousel.wizard.description
+            tt_content_defValues {
+                CType = carousel
+            }
+        }
+    }
+   show := addToList(carousel)}
+}

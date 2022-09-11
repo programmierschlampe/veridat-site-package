@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-07-18T11:22:32Z"
+        product-name="magsbg_base">
+		<header/>
+		<body>
+   			<trans-unit id="hero.title">
+				<source>Hero</source>
+			</trans-unit>
+   			<trans-unit id="values.title">
+				<source>Values</source>
+			</trans-unit>
+   			<trans-unit id="carousel.title">
+				<source>Carousel</source>
+			</trans-unit>
+
+   			<trans-unit id="backgroundimage.title">
+				<source>Background Image</source>
+			</trans-unit>
+
+   			<trans-unit id="hero.wizard.title">
+				<source>Hero Content Element</source>
+			</trans-unit>
+   			<trans-unit id="hero.wizard.description">
+				<source>Element to add a Hero Content Element</source>
+			</trans-unit>
+   			<trans-unit id="values.wizard.title">
+				<source>Values Content Element</source>
+			</trans-unit>
+   			<trans-unit id="values.wizard.description">
+				<source>Element to add a Values Content Element</source>
+			</trans-unit>
+   			<trans-unit id="carousel.wizard.title">
+				<source>Carousel Content Element</source>
+			</trans-unit>
+   			<trans-unit id="carousel.wizard.description">
+				<source>Element to add a Carousel Content Element</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
+

@@ -3,7 +3,7 @@
     <header class="header fixed-top" id="header">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
             <a class="logo d-flex align-items-center" href="/">
-                <f:image src="EXT:veridat-site-package/Resources/Public/img/v_logo.png" alt="veridat.io logo" />
+                <img src="<f:uri.image src='EXT:veridat-site-package/Resources/Public/img/v_logo.png' />" alt="veridat.io logo" />
             </a>
             <nav class="navbar" id="navbar">
                 <ul>
@@ -16,36 +16,149 @@
             <!-- .navbar -->
         </div>
     </header>
-    <section class="hero d-flex align-items-center" id="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up">Trust as a Service</h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400">Simple APIs that add a layer of trust to your workflow and enhance data integrity through distributed ledger technology</h2>
-                    <div data-aos="fade-up" data-aos-delay="600">
-                        <div class="text-center text-lg-start"><a class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center" href="#contact"><span>Get In Touch</span> </a></div>
+    <main id="main">
+        <section class="hero d-flex align-items-center" id="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                        <h1 data-aos="fade-up">Trust as a Service</h1>
+                        <h2 data-aos="fade-up" data-aos-delay="400">Simple APIs that add a layer of trust to your workflow and enhance data integrity through distributed ledger technology</h2>
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <div class="text-center text-lg-start"><a class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center" href="#contact"><span>Get In Touch</span> </a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                        <img src="<f:uri.image src='EXT:veridat-site-package/Resources/Public/img/services.png' />" alt="services" />
                     </div>
                 </div>
-                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                    <f:image src="EXT:veridat-site-package/Resources/Public/img/services.png" class="img-fluid" alt="services" />
+            </div>
+        </section>
+
+        <f:spaceless>
+        <f:cObject typoscriptObjectPath="lib.content" />
+        </f:spaceless>
+
+        <section class="contact" id="contact">
+            <div class="container" data-aos="fade-up">
+                <div class="row gy-4">
+                    <div class="col-lg-4">
+                        <div class="contact_information">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 style="margin-bottom: 0;">Contact Information</h4>
+                                    <h2>{settings.companyname}</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="info-box">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <img src="<f:uri.image src='EXT:veridat-site-package/Resources/Public/img/map.png' />" class="img-fluid" alt="email icon" />
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="icon"></div>
+                                                <h3 class="text-uppercase">Address</h3>
+                                                <p>{settings.companyaddressline1}<br/>{settings.companyaddressline2}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="info-box">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <img src="<f:uri.image src='EXT:veridat-site-package/Resources/Public/img/email.png' />" class="img-fluid" alt="email icon" />
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="icon"></div>
+                                                <h3 class="text-uppercase">Email</h3>
+                                                <p>{settings.companyemail}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <header class="section-header text-left">
+                            <h2>Contact Us</h2>
+                        </header>
+                        <script>
+                            function getParameterByName(name, url = window.location.href) {
+                                name = name.replace(/[\[\]]/g, '\\$&');
+                                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                                    results = regex.exec(url);
+                                if (!results) return null;
+                                if (!results[2]) return '';
+                                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                            }
+
+                            const mail = getParameterByName('mail');
+
+                            let mailMsg = "";
+                            let mailMsgColor = "";
+
+                            if (mail) {
+                                if (parseInt(mail) == 1) {
+                                    mailMsg = "Your message has been sent.";
+                                    mailMsgColor = "#00cc00";
+                                } else {
+                                    mailMsg = "Your message could not be sent. Please try again.";
+                                    mailMsgColor = "#cc0000";
+                                }
+
+                                const mailMsgHtml = `<div class="row mx-4 mb-4"><div class="col-md-12" style="font-weight:bold;color:${mailMsgColor}">${mailMsg}</div></div>`;
+
+                                document.write(mailMsgHtml);
+                            }
+                        </script>
+                        <form action="action_page.php" class="php-email-form" method="post">
+                            <div class="row gy-4">
+                                <div class="col-md-6"><input class="form-control" name="name" placeholder="Name" required="" type="text" /></div>
+                                <div class="col-md-6 "><input class="form-control" name="cname" placeholder="Company Name" required="" type="text" /></div>
+                                <div class="col-md-6"><input class="form-control" name="p_number" placeholder="Phone Number" required="" type="number" /></div>
+                                <div class="col-md-6 "><input class="form-control" name="email" placeholder="Email Address" required="" type="email" /></div>
+                                <div class="col-md-12"><textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea></div>
+                                <div class="col-md-12"><input id="url" name="url" type="hidden" value="" />
+                                    <script>
+                                        document.getElementById('url').value = location.href;
+
+                                    </script>
+                                    <div class="form-group form-group-big">
+                                        <!-- div class="g-recaptcha" data-sitekey="6LcdRVEaAAAAAMDLQpkWA5CcOLA2QgEBGdIr6Aoa"></div -->
+                                        <div class="g-recaptcha" data-sitekey="6Lef5HwaAAAAAK1knJVW88yGTSkez3IS5Zsx5d1P"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                                    <button name="submit" type="submit">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Section -->
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-md-4 footer-info"><a class="logo d-flex align-items-center" href="index.html"><img alt="" src="img/v_logo.png" /> </a></div>
+                    <div class="col-md-8">
+                        <div class="copyright">&copy; 2021 Veridat, LLC. <span><a href="privacy-policy.html">Privacy Policy </a></span></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-<f:spaceless>
-    <f:cObject typoscriptObjectPath="lib.content" />
-</f:spaceless>
-
-<footer class="footer" id="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row gy-4">
-                <div class="col-md-4 footer-info"><a class="logo d-flex align-items-center" href="index.html"><img alt="" src="img/v_logo.png" /> </a></div>
-                <div class="col-md-8">
-                    <div class="copyright">&copy; 2021 Veridat, LLC. <span><a href="privacy-policy.html">Privacy Policy </a></span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
+    <!--f:debug>{_all}</f:debug-->
+</html>
