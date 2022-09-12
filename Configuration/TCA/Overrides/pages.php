@@ -5,7 +5,7 @@ call_user_func(function () {
     /**
      * Extension key
      */
-    $extensionKey = 'veridat-site-package';
+    $extensionKey = 'veridat_site_package';
 
     /**
      * Add default TypoScript (constants and setup)

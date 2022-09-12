@@ -1,4 +1,4 @@
-# veridat-site-package
+# veridat_site_package
 
 Sitepackage for website www.veridat.io
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace IDS\VeridatSitePackage\Domain\Model;
+namespace IdsCoAt\VeridatSitePackage\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 

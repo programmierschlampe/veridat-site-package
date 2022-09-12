@@ -2,10 +2,10 @@
 
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xlf:tx_veridat_domain_model_carouselitem',
+        'title' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_db.xlf:tx_veridat_domain_model_carouselitem',
         'label' => 'header',
         'delete' => 'deleted',
-        'iconfile' => 'EXT:veridat-site-package/Resources/Public/Icons/Carouselitem.svg',
+        'iconfile' => 'EXT:veridat_site_package/Resources/Public/Icons/Carouselitem.svg',
         'searchFields' => 'header,subheader,bodytext',
 	    'enablecolumns' => [
 		    'disabled' => 'hidden',
@@ -118,7 +118,7 @@ return [
                 'type' => 'inline',
             ],
             'exclude' => '1',
-            'label' => 'LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xml:tx_veridat_domain_model_carouselitem.image',
+            'label' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_db.xml:tx_veridat_domain_model_carouselitem.image',
         ],
         'hidden' => [
             'config' => [

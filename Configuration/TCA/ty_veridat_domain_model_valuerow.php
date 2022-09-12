@@ -2,10 +2,10 @@
 
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xlf:tx_veridat_domain_model_valuerow',
-        'label' => 'LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xlf:tx_veridat_domain_model_valuerow',
+        'title' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_db.xlf:tx_veridat_domain_model_valuerow',
+        'label' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_db.xlf:tx_veridat_domain_model_valuerow',
         'delete' => 'deleted',
-        'iconfile' => 'EXT:veridat-site-package/Resources/Public/Icons/Valuerow.svg',
+        'iconfile' => 'EXT:veridat_site_package/Resources/Public/Icons/Valuerow.svg',
         'searchFields' => '',
 	    'enablecolumns' => [
 		    'disabled' => 'hidden',
@@ -25,7 +25,7 @@ return [
                         'sort' => 1,
                     ],
                     'expandSingle' => 1,
-                    'newRecordLinkTitle' => 'LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xml:tx_veridat_domain_model_valuerow.addNewRecord',
+                    'newRecordLinkTitle' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_db.xml:tx_veridat_domain_model_valuerow.addNewRecord',
                     'useSortable' => 1,
                 ],
                 'foreign_field' => 'parentid',
@@ -35,7 +35,7 @@ return [
                 'type' => 'inline',
             ],
             'exclude' => 0,
-            'label' => 'LLL:EXT:veridat-site-package/Resources/Private/Language/locallang_db.xml:tx_veridat_domain_model_valuerow.selected_valueboxes',
+            'label' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_db.xml:tx_veridat_domain_model_valuerow.selected_valueboxes',
         ],
         'hidden' => [
             'config' => [

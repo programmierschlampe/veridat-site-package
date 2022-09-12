@@ -2,8 +2,8 @@
 
 # page {
 #   fluidtemplate {
-#     layoutRootPath = EXT:veridat-site-package/Resources/Private/Layouts/
-#     partialRootPath = EXT:veridat-site-package/Resources/Private/Partials/
-#     templateRootPath = EXT:veridat-site-package/Resources/Private/Templates/
+#     layoutRootPath = EXT:veridat_site_package/Resources/Private/Layouts/
+#     partialRootPath = EXT:veridat_site_package/Resources/Private/Partials/
+#     templateRootPath = EXT:veridat_site_package/Resources/Private/Templates/
 #   }
 # }

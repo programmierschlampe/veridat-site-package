@@ -1,11 +1,11 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
 
-lib.fluidContent.templateRootPaths.30 = EXT:veridat-site-package/Resources/Private/Templates/
-lib.fluidContent.partialRootPaths.30 = EXT:veridat-site-package/Resources/Private/Partials/
-lib.fluidContent.layoutRootPaths.30 = EXT:veridat-site-package/Resources/Private/Layouts/
-lib.contentElement.templateRootPaths.30 = EXT:veridat-site-package/Resources/Private/Templates/
-lib.contentElement.partialRootPaths.30 = EXT:veridat-site-package/Resources/Private/Partials/
-lib.contentElement.layoutRootPaths.30 = EXT:veridat-site-package/Resources/Private/Layouts/
+lib.fluidContent.templateRootPaths.30 = EXT:veridat_site_package/Resources/Private/Templates/
+lib.fluidContent.partialRootPaths.30 = EXT:veridat_site_package/Resources/Private/Partials/
+lib.fluidContent.layoutRootPaths.30 = EXT:veridat_site_package/Resources/Private/Layouts/
+lib.contentElement.templateRootPaths.30 = EXT:veridat_site_package/Resources/Private/Templates/
+lib.contentElement.partialRootPaths.30 = EXT:veridat_site_package/Resources/Private/Partials/
+lib.contentElement.layoutRootPaths.30 = EXT:veridat_site_package/Resources/Private/Layouts/
 
 # -------------
 # pagerendering
@@ -19,10 +19,10 @@ page {
   meta.viewport = width=device-width, initial-scale=1.0
   headerData {
     10 = TEXT
-    10.data = path:EXT:veridat-site-package/Resources/Public/img/favicon.png
+    10.data = path:EXT:veridat_site_package/Resources/Public/img/favicon.png
     10.wrap = <link href="|" rel="icon" />
     20 = TEXT
-    20.data = path:EXT:veridat-site-package/Resources/Public/img/apple-touch-icon.png
+    20.data = path:EXT:veridat_site_package/Resources/Public/img/apple-touch-icon.png
     20.wrap = <link href="|" rel="icon" />
   }
 
@@ -35,14 +35,14 @@ page {
     bootstrapmin.crossorigin = anonymous
     bootstrapicons = https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css
     bootstrapicons.external = 1
-    remixicon = EXT:veridat-site-package/Resources/Public/css/remixicon.css
+    remixicon = EXT:veridat_site_package/Resources/Public/css/remixicon.css
     swiperbundle = https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css
     swiperbundle.external = 1
     glightbox = https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
     glightbox.external = 1
     owlcarousel = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css
     owlcarousel.external = 1
-    custom = EXT:veridat-site-package/Resources/Public/css/custom.css
+    custom = EXT:veridat_site_package/Resources/Public/css/custom.css
   }
 
   includeJS {
@@ -73,8 +73,8 @@ page {
     isotope.external = 1
     glightbox = https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js
     glightbox.external = 1
-    validate = EXT:veridat-site-package/Resources/Public/js/validate.js
-    main = EXT:veridat-site-package/Resources/Public/js/main.js
+    validate = EXT:veridat_site_package/Resources/Public/js/validate.js
+    main = EXT:veridat_site_package/Resources/Public/js/main.js
   }
 
   jsInline {
@@ -137,7 +137,7 @@ page {
     templateRootPaths < lib.fluidContent.templateRootPaths 
     partialRootPaths < lib.fluidContent.partialRootPaths
     layoutRootPaths < lib.fluidContent.layoutRootPaths
-    file = EXT:veridat-site-package/Resources/Private/Templates/Base.html
+    file = EXT:veridat_site_package/Resources/Private/Templates/Base.html
 
     variables {
       hostname = TEXT

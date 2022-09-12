@@ -128,5 +128,5 @@ call_user_func(
             '
 		);
 	},
-	'veridat-site-package'
+	'veridat_site_package'
 );

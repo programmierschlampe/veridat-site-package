@@ -30,11 +30,11 @@ $EM_CONF[$_EXTKEY] = [
     ],
 	'autoload' => [
 		'psr-4' => [
-			'IDS\\VeridatSitePackage\\' => 'Classes'
+			'IdsCoAt\\VeridatSitePackage\\' => 'Classes'
 		]
 	],
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 1,11.0.
-    'version' => '11.0.2',
+    'version' => '11.0.6',
 ];
