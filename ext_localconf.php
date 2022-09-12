@@ -21,5 +21,5 @@ call_user_func(
 		$iconRegistry->registerIcon(	'content-carousel'			,\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,	['source' => 'EXT:' . $extKey . '/Resources/Public/Icons/Carousel.svg']);
 		$iconRegistry->registerIcon(	'content-carouselitem'	,\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,	['source' => 'EXT:' . $extKey . '/Resources/Public/Icons/Carouselitem.svg']);
 	},
-    'veridat-site-package'
+    'veridat_site_package'
 );

@@ -1,5 +1,5 @@
 {
-	"name": "ids-co-at/veridat-site-package",
+	"name": "ids-co-at/veridat_site_package",
 	"type": "typo3-cms-extension",
 	"description": "Sitepackage for website www.veridat.io.",
 	"homepage": "https://ids.co.at/",
@@ -17,7 +17,7 @@
 	},
 	"extra": {
 	   "typo3/cms": {
-		  "extension-key": "veridat-site-package"
+		  "extension-key": "veridat_site_package"
 	   }
 	}
 }
