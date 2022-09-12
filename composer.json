@@ -19,5 +19,8 @@
 	   "typo3/cms": {
 		  "extension-key": "veridat_site_package"
 	   }
-	}
+	},
+	"psr-4": {
+		"IdsCoAt\\VeridatSitePackage\\": "Classes"
+	 }
 }
