@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2022-09-12T11:22:32Z"
-        product-name="veridat_site_package">
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:veridat_site_package/Resources/Private/Language/locallang_general.xlf" date="2011-10-17T20:22:34Z" product-name="lang">
 		<header/>
 		<body>
    			<trans-unit id="hero.title">
@@ -14,9 +13,20 @@
 				<source>Carousel</source>
 			</trans-unit>
 
-   			<trans-unit id="backgroundimage.title">
+   			<trans-unit id="backgroundimage.title" resname="backgroundimage.title">
 				<source>Background Image</source>
 			</trans-unit>
+			
+   			<trans-unit id="tabs.valuerows" resname="tabs.valuerows">
+				<source>Rows</source>
+			</trans-unit>
+   			<trans-unit id="valuerows.title" resname="valuerows.title">
+				<source>Rows</source>
+			</trans-unit>
+   			<trans-unit id="valuerows.addNewRecord" resname="valuerows.addNewRecord">
+				<source>Add Row</source>
+			</trans-unit>
+			
 
    			<trans-unit id="hero.wizard.title">
 				<source>Hero Content Element</source>
@@ -60,9 +70,6 @@
    			<trans-unit id="tx_veridat_domain_model_valuebox.image">
 				<source>Image</source>
 			</trans-unit>
-
-
-
 		</body>
 	</file>
 </xliff>

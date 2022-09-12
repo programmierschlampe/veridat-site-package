@@ -8,8 +8,8 @@ CREATE TABLE pages (
 
 CREATE TABLE tt_content (
     backgroundimage int(11) unsigned NOT NULL DEFAULT '0',
-    selected_valuerows int(11) unsigned NOT NULL DEFAULT '0',
-    selected_carouselitems int(11) unsigned NOT NULL DEFAULT '0',
+    valuerows int(11) unsigned NOT NULL DEFAULT '0',
+    carouselitems int(11) unsigned NOT NULL DEFAULT '0',
 );
 
 CREATE TABLE tx_veridat_domain_model_valuerow (
@@ -17,7 +17,7 @@ CREATE TABLE tx_veridat_domain_model_valuerow (
     pid int(11) DEFAULT '0' NOT NULL,
     parentid int(11) DEFAULT '0' NOT NULL,
 
-    selected_valueboxes int(11) unsigned DEFAULT '0' NOT NULL,
+    valueboxes int(11) unsigned DEFAULT '0' NOT NULL,
 
     sorting_foreign int(11) DEFAULT '0' NOT NULL,
     hidden smallint(5) unsigned DEFAULT '0' NOT NULL,

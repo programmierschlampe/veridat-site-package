@@ -15,7 +15,7 @@ call_user_func(
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 
 		$iconRegistry->registerIcon(	'content-hero'			,\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,	['source' => 'EXT:' . $extKey . '/Resources/Public/Icons/Hero.svg']);
-		$iconRegistry->registerIcon(	'content-value'		,\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,	['source' => 'EXT:' . $extKey . '/Resources/Public/Icons/Values.svg']);
+		$iconRegistry->registerIcon(	'content-values'		,\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,	['source' => 'EXT:' . $extKey . '/Resources/Public/Icons/Values.svg']);
 		$iconRegistry->registerIcon(	'content-valuerow'		,\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,	['source' => 'EXT:' . $extKey . '/Resources/Public/Icons/Valuerow.svg']);
 		$iconRegistry->registerIcon(	'content-valuebox'		,\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,	['source' => 'EXT:' . $extKey . '/Resources/Public/Icons/Valuebox.svg']);
 		$iconRegistry->registerIcon(	'content-carousel'			,\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,	['source' => 'EXT:' . $extKey . '/Resources/Public/Icons/Carousel.svg']);

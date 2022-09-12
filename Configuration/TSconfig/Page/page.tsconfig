@@ -32,7 +32,7 @@ mod.wizards.newContentElement.wizardItems.common {
 
 mod.wizards.newContentElement.wizardItems.common {
     elements {
-        caruosel {
+        carousel {
             iconIdentifier = content-carousel
             title = LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_db.xlf:carousel.wizard.title
             description = LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_db.xlf:carousel.wizard.description

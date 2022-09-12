@@ -3,9 +3,9 @@ call_user_func(
 	function ($extKey) {
 
 		// Adds the new content elements to the "Type" dropdown
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content','CType',array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:hero.title','hero','content-hero'),'textmedia','after');
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content','CType',array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:values.title','values','content-values'),'hero','after');
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content','CType',array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:carousel.title','carousel','content-carousel'),'values','after');
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content','CType',array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:hero.title','hero','content-hero'),'textmedia','after');
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content','CType',array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:values.title','values','content-values'),'hero','after');
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content','CType',array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:carousel.title','carousel','content-carousel'),'values','after');
 
 		// assign type icons to the new content elements
 		\TYPO3\CMS\Core\Utility\ArrayUtility::mergeRecursiveWithOverrule($GLOBALS['TCA']['tt_content'],['ctrl' => ['typeicon_classes' => ['hero' 		=> 'content-hero']]]);
@@ -15,7 +15,11 @@ call_user_func(
         //define columns
 		$herocolumns = array (
             'backgroundimage' => [
+                'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_general.xlf:backgroundimage.title',
+                'exclude' => '1',
                 'config' => [
+                    'maxitems' => '2',
+                    'minitems' => '1',
                     'appearance' => [
                         'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
                         'enabledControls' => [
@@ -23,8 +27,8 @@ call_user_func(
                             'dragdrop' => '1',
                             'hide' => '1',
                             'info' => '1',
-                            'new' => '',
-                            'sort' => '',
+                            'new' => '1',
+                            'sort' => '1',
                         ],
                         'headerThumbnail' => [
                             'field' => 'uid_local',
@@ -84,36 +88,55 @@ call_user_func(
                         ],
                     ],
                     'type' => 'inline',
-                    'exclude' => '1',
-                    'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xml:backgroundimage.title',
+                ],
+            ],
+        );
+
+		$valuescolumns = array (
+            'valuerows' => [
+                'exclude' => '0',
+		        'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:valuerows.title',
+                'config' => [
+                    'type' => 'inline',
+                    'foreign_table' => 'tx_veridat_domain_model_valuerow',
+                    'foreign_field' => 'parentid',
+                    'foreign_sortby' => 'sorting_foreign',
+                    'maxitems' => 30,
+                    'appearance' => [
+                        'useSortable' => 1,
+                        'collapseAll' => 1,
+                        'expandSingle' => 1,
+                        'newRecordLinkTitle' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:valuerows.addNewRecord',
+                        'enabledControls' => [
+                            'delete' => 1,
+                            'dragdrop' => 1,
+                            'hide' => 1,
+                            'info' => 0,
+                            'new' => 1,
+                            'sort' => 1,
+                        ],
+                    ],
+                    'behaviour' => [
+                        'localizeChildrenAtParentLocalization' => 1,    
+                    ],
+                    
                 ],
             ],
         );
 
    		//add columns to TCA
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$herocolumns);
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$valuescolumns);
 
 		//add form fields to palette
 		//\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content','backgroundimages','backgroundimage','');
 
         $GLOBALS['TCA']['tt_content']['types']['hero'] = array(
-		    'columnsOverrides' => [
-                'bodytext' => [
-                    'config' => [
-                        'enableRichtext' => 1,
-                        'richtextConfiguration ' => 'veridat',
-                    ],                    
-                ],
-		    ],
-            'previewRenderer' => 'TYPO3\CMS\Frontend\Preview\TextpicPreviewRenderer',
             'showitem' => '
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general, 
                     --palette--;;general, 
-                    --palette--;;headers, bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel, 
+                    --palette--;;headers, 
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images, image, --linebreak--, backgroundimage,
-                    --palette--;;mediaAdjustments, 
-                    --palette--;;gallerySettings, 
-                    --palette--;;imagelinks, 
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance, 
                     --palette--;;frames, 
                     --palette--;;appearanceLinks, 
@@ -127,6 +150,26 @@ call_user_func(
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
             '
 		);
-	},
+        $GLOBALS['TCA']['tt_content']['types']['values'] = array(
+            'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general, 
+                    --palette--;;general, 
+                    --palette--;;headers, 
+                --div--;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:tabs.valuerows, valuerows,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance, 
+                    --palette--;;frames, 
+                    --palette--;;appearanceLinks, 
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, 
+                    --palette--;;language, 
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, 
+                    --palette--;;hidden, 
+                    --palette--;;access, 
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories, categories, 
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes, rowDescription, 
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+            '
+		);
+
+    },
 	'veridat_site_package'
 );

@@ -2,7 +2,7 @@
 
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_db.xlf:tx_veridat_domain_model_valuebox',
+        'title' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_general.xlf:tx_veridat_domain_model_valuebox',
         'label' => 'header',
         'delete' => 'deleted',
         'iconfile' => 'EXT:veridat_site_package/Resources/Public/Icons/Valuebox.svg',
@@ -104,7 +104,7 @@ return [
                 'type' => 'inline',
             ],
             'exclude' => '1',
-            'label' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_db.xml:tx_veridat_domain_model_valuebox.image',
+            'label' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_general.xlf:tx_veridat_domain_model_valuebox.image',
         ],
         'hidden' => [
             'config' => [

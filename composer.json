@@ -20,7 +20,9 @@
 		  "extension-key": "veridat_site_package"
 	   }
 	},
-	"psr-4": {
-		"IdsCoAt\\VeridatSitePackage\\": "Classes"
-	 }
+	"autoload": {
+		"psr-4": {
+			"IdsCoAt\\VeridatSitePackage\\": "Classes"
+		}
+	}
 }
