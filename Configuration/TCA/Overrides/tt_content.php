@@ -3,7 +3,7 @@ call_user_func(
 	function ($extKey) {
 
 		// Adds the new content elements to the "Type" dropdown
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content','CType',array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:hero.title','hero','content-hero'),'uploads','after');
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content','CType',array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:hero.title','hero','content-hero'),'textmedia','after');
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content','CType',array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:values.title','values','content-values'),'hero','after');
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content','CType',array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:carousel.title','carousel','content-carousel'),'values','after');
 
@@ -94,7 +94,7 @@ call_user_func(
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$herocolumns);
 
 		//add form fields to palette
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content','backgroundimages','backgroundimage','');
+		//\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content','backgroundimages','backgroundimage','');
 
         $GLOBALS['TCA']['tt_content']['types']['hero'] = array(
 		    'columnsOverrides' => [
@@ -110,7 +110,7 @@ call_user_func(
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general, 
                     --palette--;;general, 
                     --palette--;;headers, bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel, 
-                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images, image, backgroundimages,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images, image, --linebreak--, backgroundimage,
                     --palette--;;mediaAdjustments, 
                     --palette--;;gallerySettings, 
                     --palette--;;imagelinks, 

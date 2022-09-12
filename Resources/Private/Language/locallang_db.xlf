@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-07-18T11:22:32Z"
-        product-name="magsbg_base">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-09-12T11:22:32Z"
+        product-name="veridat_site_package">
 		<header/>
 		<body>
    			<trans-unit id="hero.title">

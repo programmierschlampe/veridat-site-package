@@ -186,3 +186,15 @@ config {
   concatenateCss = 0
   concatenateJs = 0
 }
+
+tt_content {
+   hero =< lib.contentElement
+   hero {
+      templateName = Hero.html
+      dataProcessing {
+         10 = IdsCoAt\VeridatSitePackage\DataProcessing\HeroProcessor
+         10.references.fieldName = image
+      }
+
+   }
+}
