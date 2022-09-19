@@ -16,9 +16,9 @@ namespace IdsCoAt\VeridatSitePackage\DataProcessing;
  */
 
 /* TYPO3\CMS\Frontend\Page\PageRepository; */
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 use TYPO3\CMS\Core\Resource\FileRepository;
-
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
@@ -54,9 +54,53 @@ class ValuesProcessor implements DataProcessorInterface
         array $processedData
         )
     {
+
+        $relfield = $processorConfiguration['relfield'];
+        $relatedValue = $processedData['data'][$relfield];
         $additionalData = array();
-        $additionalData['test'] = 'test';
-        $processedData['ValuesProcessorData'] = $additionalData;
+        
+        $fileRepository = GeneralUtility::makeInstance(FileRepository::class);
+        $valuerowQueryBuilder = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable('tx_veridat_domain_model_valuerow');
+        $valuerowitemquery = $valuerowQueryBuilder
+        ->select('r.*')
+        ->from('tx_veridat_domain_model_valuerow','r')
+        ->where(
+            $valuerowQueryBuilder->expr()->eq('r.parentid',$valuerowQueryBuilder->createNamedParameter($relatedValue, \PDO::PARAM_INT))
+        )
+        ->orderBy('r.sorting_foreign', 'ASC');
+        
+        $rows = $valuerowitemquery->execute()->fetchAll();
+
+        $valuerows = array();
+        foreach($rows as $row)
+        {
+            $valueboxQueryBuilder = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable('tx_veridat_domain_model_valuebox');
+            $valueboxitemquery = $valueboxQueryBuilder
+            ->select('b.*')
+            ->from('tx_veridat_domain_model_valuebox','b')
+            ->where(
+                $valueboxQueryBuilder->expr()->eq('b.parentid',$valueboxQueryBuilder->createNamedParameter($row['uid'], \PDO::PARAM_INT))
+            )->orderBy('b.sorting_foreign', 'ASC');
+            $boxes = $valueboxitemquery->execute()->fetchAll();
+
+            $valueboxes = array();
+            foreach($boxes as $box)
+            {
+                $boxFiles = $fileRepository->findByRelation('tx_veridat_domain_model_valuebox', 'image', $box['uid']);
+                $boxImages = array();
+                foreach ($boxFiles as $key => $value) {
+                    //$boxImage = $value->getOriginalFile()->getProperties();
+                    $boxImage = $value->getOriginalFile()->getProperties();
+                    array_push($boxImages,$boxImage);
+                }
+                $box['images'] = $boxImages;
+                array_push($valueboxes, $box);
+            }
+            $row['valueboxes'] = $valueboxes;
+
+            array_push($valuerows,$row);
+        }
+        $processedData['valuerows'] = $valuerows;
         
         return $processedData;
     }

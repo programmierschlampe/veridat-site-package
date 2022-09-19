@@ -3,7 +3,7 @@
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_general.xlf:tx_veridat_domain_model_valuerow',
-        'label' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_general.xlf:tx_veridat_domain_model_valuerow',
+        'label' => 'label',
         'delete' => 'deleted',
         'iconfile' => 'EXT:veridat_site_package/Resources/Public/Icons/Valuerow.svg',
         'searchFields' => '',
@@ -12,6 +12,17 @@ return [
 	    ]
     ],
     'columns' => [
+        'label' => [
+            'config' => [
+                'max' => 255,
+                'size' => 50,
+                'type' => 'input',
+            ],
+            'exclude' => 1,
+            'l10n_mode' => 'prefixLangTitle',
+            'label' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_general.xlf:tx_veridat_domain_model_valuerow.label.title',           
+            'description' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_general.xlf:tx_veridat_domain_model_valuerow.label.description',
+        ],
         'valueboxes' => [
             'config' => [
                 'appearance' => [
@@ -53,6 +64,6 @@ return [
         ],
     ],
     'types' => [
-        '0' => ['showitem' => 'valueboxes, hidden']
+        '0' => ['showitem' => 'label,valueboxes, hidden']
     ]
 ];

@@ -17,6 +17,7 @@ CREATE TABLE tx_veridat_domain_model_valuerow (
     pid int(11) DEFAULT '0' NOT NULL,
     parentid int(11) DEFAULT '0' NOT NULL,
 
+	label varchar(255) DEFAULT '' NOT NULL,
     valueboxes int(11) unsigned DEFAULT '0' NOT NULL,
 
     sorting_foreign int(11) DEFAULT '0' NOT NULL,
@@ -53,6 +54,8 @@ CREATE TABLE tx_veridat_domain_model_carouselitem (
 
 	header varchar(255) DEFAULT '' NOT NULL,
     subheader varchar(255) DEFAULT '' NOT NULL,
+   	header_link varchar(1024) DEFAULT '' NOT NULL,
+    date int(10) unsigned DEFAULT '0' NOT NULL,
   	bodytext mediumtext,
 	image int(11) unsigned DEFAULT '0' NOT NULL,
 

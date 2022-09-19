@@ -6,11 +6,11 @@
  * Author: Ing. Gerhard Huber <ids.co.at>
  * https://ids.co.at/
  */
-
-defined('TYPO3_MODE') or die();
-
 call_user_func(
 	function ($extKey) {
+		//add RTE Configuration
+		$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['veridat'] = 'EXT:'.$extKey.'/Configuration/RTE/veridat.yaml';
+
 		//register extension icons
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 

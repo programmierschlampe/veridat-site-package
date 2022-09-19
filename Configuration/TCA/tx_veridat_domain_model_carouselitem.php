@@ -22,6 +22,16 @@ return [
             'l10n_mode' => 'prefixLangTitle',
             'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header'           
         ],
+        'date' => [
+            'config' =>[
+                'default' => 0,
+                'eval' => 'date,int,required',
+                'renderType' => 'inputDateTime',
+                'type' => 'input'
+            ],
+            'exclude' => 1,
+            'label' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_general.xlf:tx_veridat_domain_model_carouselitem.date',
+        ],
         'subheader' => [
             'config' => [
                 'max' => 255,
@@ -31,6 +41,25 @@ return [
             ],
             'exclude' => 1,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.subheader'
+        ],
+        'header_link' => [
+            'config' => [
+                'eval' => 'trim',
+                'fieldControl' => [
+                    'linkPopup' => [
+                        'options' => [
+                            'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel',
+                        ],
+                    ],
+                ],
+                'max' => 1024,
+                'renderType' => 'inputLink',
+                'size' => 50,
+                'softref' => 'typolink',
+                'type' => 'input',
+            ],
+            'exclude' => 1,
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link',
         ],
         'bodytext' => [
             'config' => [
@@ -136,6 +165,6 @@ return [
         ],
     ],
     'types' => [
-        '0' => ['showitem' => 'header, subheader, bodytext, image, hidden']
+        '0' => ['showitem' => 'header, date, subheader, header_link, bodytext, image, hidden']
     ]
 ];

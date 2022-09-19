@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:if condition="{valueboxes}">
+        <f:for each="{valueboxes}" as="valuebox">
+            <div class="col-lg-4">
+                <div class="box" data-aos="fade-up" data-aos-delay="200">
+                    <f:for each="{valuebox.images}" as="file" iteration="iter">
+                        <f:if condition="{iter.isFirst}">
+                            <img class="img-fluid" src="<f:uri.image src='{file.uid}' />" />
+                        </f:if>
+                    </f:for>
+                    <h3>{valuebox.header}</h3>
+                    <p>{valuebox.subheader}</p>
+                </div>
+            </div>
+        </f:for>
+    </f:if>
+</html>

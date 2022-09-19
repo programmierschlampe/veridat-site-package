@@ -21,6 +21,8 @@ page {
     10 = TEXT
     10.data = path:EXT:veridat_site_package/Resources/Public/img/favicon.png
     10.wrap = <link href="|" rel="icon" />
+    15=TEXT
+    15.char = 10
     20 = TEXT
     20.data = path:EXT:veridat_site_package/Resources/Public/img/apple-touch-icon.png
     20.wrap = <link href="|" rel="icon" />
@@ -29,20 +31,32 @@ page {
   includeCSS {
     googleFont = https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap
     googleFont.external = 1
-    bootstrapmin = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css
-    bootstrapmin.external = 1
-    bootstrapmin.integrity = sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC
-    bootstrapmin.crossorigin = anonymous
-    bootstrapicons = https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css
-    bootstrapicons.external = 1
+
+    # bootstrapmin = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css
+    # bootstrapmin.external = 1
+    # bootstrapmin.integrity = sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC
+    # bootstrapmin.crossorigin = anonymous
+    bootstrapmininternal = EXT:veridat_site_package/Resources/Public/css/bootstrap.min.css
+
+    # bootstrapicons = https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css
+    # bootstrapicons.external = 1
+    bootstrapiconsinternal = EXT:veridat_site_package/Resources/Public/css/bootstrap-icons.css
+
     remixicon = EXT:veridat_site_package/Resources/Public/css/remixicon.css
-    swiperbundle = https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css
-    swiperbundle.external = 1
-    glightbox = https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
-    glightbox.external = 1
+
+    # swiperbundle = https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css
+    # swiperbundle.external = 1
+    swiperbundleinternal = EXT:veridat_site_package/Resources/Public/css/swiper-bundle.min.css
+
+    # glightbox = https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
+    # glightbox.external = 1
+    glightboxinternal = EXT:veridat_site_package/Resources/Public/css/glightbox.min.css
+
+    style = EXT:veridat_site_package/Resources/Public/css/style.css
+
     owlcarousel = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css
     owlcarousel.external = 1
-    custom = EXT:veridat_site_package/Resources/Public/css/custom.css
+    
   }
 
   includeJS {
@@ -53,83 +67,149 @@ page {
   }
 
   includeJSFooter {
-    jquery = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js
+    #jquery = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js
+    jquery = https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js
     jquery.external = 1
+
     owlcarousel = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js
     owlcarousel.external = 1
+
     fontawesome = https://use.fontawesome.com/826a7e3dce.js
     fontawesome.external = 1
+
     matchheight = https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js
     matchheight.external = 1
-    bootstrapbundle = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
-    bootstrapbundle.external = 1
-    bootstrapbundle.integrity = sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM
-    bootstrapbundle.crossorigin = anonymous
-    swiper = https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js
-    swiper.external = 1
-    purecounter = https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js
-    purecounter.external = 1
-    isotope = https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js
-    isotope.external = 1
-    glightbox = https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js
-    glightbox.external = 1
-    validate = EXT:veridat_site_package/Resources/Public/js/validate.js
+
+    # bootstrapbundle = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+    # bootstrapbundle.external = 1
+    # bootstrapbundle.integrity = sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM
+    # bootstrapbundle.crossorigin = anonymous
+    bootstrapbundleinternal = EXT:veridat_site_package/Resources/Public/js/bootstrap.bundle.js
+
+    #validate = EXT:veridat_site_package/Resources/Public/js/validate.js
+
+    # swiperbundle = https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js
+    # swiperbundle.external = 1
+    swiperbundleinternal = EXT:veridat_site_package/Resources/Public/js/swiper-bundle.min.js
+
+    # purecounter = https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js
+    # purecounter.external = 1
+    purecounterinternal = EXT:veridat_site_package/Resources/Public/js/purecounter.js
+
+    # isotope = https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js
+    # isotope.external = 1
+    isotopeinternal = EXT:veridat_site_package/Resources/Public/js/isotope.pkgd.min.js
+
+    #glightbox = https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js
+    #glightbox.external = 1
+    glightboxinternal = EXT:veridat_site_package/Resources/Public/js/glightbox.min.js
+
     main = EXT:veridat_site_package/Resources/Public/js/main.js
   }
 
-  jsInline {
+  jsFooterInline {
     10 = TEXT
-    10.value
+    10.value 
     20 = TEXT
     20.value = $('.owl-carousel').owlCarousel({
+    25=TEXT
+    25.char = 10
     30 = TEXT
-    30.value = loop: true,
+    30.value =      loop: true,
+    35=TEXT
+    35.char = 10
     40 = TEXT
-    40.value = margin: 25,
+    40.value =      margin: 25,
+    45=TEXT
+    45.char = 10
     50 = TEXT
-    50.value = nav: true,
+    50.value =      nav: true,
+    55=TEXT
+    55.char = 10
     60 = TEXT
-    60.value = navText: [
+    60.value =      navText: [
+    65=TEXT
+    65.char = 10
     70 = TEXT
-    70.value = "<i class='fa fa-caret-left'></i>",
+    70.value =           "<i class='fa fa-caret-left'></i>",
+    75=TEXT
+    75.char = 10
     80 = TEXT
-    80.value = "<i class='fa fa-caret-right'></i>"
+    80.value =           "<i class='fa fa-caret-right'></i>"
+    85=TEXT
+    85.char = 10
     90 = TEXT
-    90.value = ],
+    90.value =      ],
+    95=TEXT
+    95.char = 10
     100 = TEXT
-    100.value = autoplay: true,
+    100.value =      autoplay: true,
+    105=TEXT
+    105.char = 10
     110 = TEXT
-    110.value = autoplayHoverPause: true,
+    110.value =      autoplayHoverPause: true,
+    115=TEXT
+    115.char = 10
     120 = TEXT
-    120.value = responsive: {
+    120.value =      responsive: {
+    125=TEXT
+    125.char = 10
     130 = TEXT
-    130.value = 0: {
+    130.value =           0: {
+    135=TEXT
+    135.char = 10
     140 = TEXT
-    140.value = items: 1
+    140.value =                items: 1
+    145=TEXT
+    145.char = 10
     150 = TEXT
-    150.value = },
+    150.value =           },
+    155=TEXT
+    155.char = 10
     160 = TEXT
-    160.value = 600: {
+    160.value =           600: {
+    165=TEXT
+    165.char = 10
     170 = TEXT
-    170.value = items: 2
+    170.value =                items: 2
+    175=TEXT
+    175.char = 10
     180 = TEXT
-    180.value = },
+    180.value =           },
+    185=TEXT
+    185.char = 10
     190 = TEXT
-    190.value = 1000: {
+    190.value =           1000: {
+    195=TEXT
+    195.char = 10
     200 = TEXT
-    200.value = items: 4
+    200.value =                items: 4
+    205=TEXT
+    205.char = 10
     210 = TEXT
-    210.value = }
+    210.value =           }
+    215=TEXT
+    215.char = 10
     220 = TEXT
-    220.value = },
+    220.value =      },
+    225=TEXT
+    225.char = 10
     230 = TEXT
-    230.value = onInitialize: function() {
+    230.value =      onInitialize: function() {
+    235=TEXT
+    235.char = 10
     240 = TEXT
-    240.value = $('.post-box').matchHeight();
+    240.value =           $('.post-box').matchHeight();
+    245=TEXT
+    245.char = 10
     250 = TEXT
-    250.value = }
+    250.value =      }
+    255=TEXT
+    255.char = 10
     260 = TEXT
     260.value = })
+    265=TEXT
+    265.char = 10
   }
 
   10 = FLUIDTEMPLATE
@@ -205,6 +285,19 @@ tt_content {
       templateName = Values.html
       dataProcessing {
          10 = IdsCoAt\VeridatSitePackage\DataProcessing\ValuesProcessor
+         10 {
+            relfield = uid
+         }
+      }
+   }
+   carousel =< lib.contentElement
+   carousel {
+      templateName = Carousel.html
+      dataProcessing {
+         10 = IdsCoAt\VeridatSitePackage\DataProcessing\CarouselProcessor
+         10 {
+            relfield = uid
+         }
       }
    }
 }

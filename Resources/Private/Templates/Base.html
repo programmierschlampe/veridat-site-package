@@ -7,9 +7,9 @@
             </a>
             <nav class="navbar" id="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto" href="#contact">Talk to Sales</a></li>
-                    <li><a class="nav-link scrollto" href="#recent-blog-posts">News</a></li>
-                    <li><a class="nav-link scrollto" href="#values">Features</a></li>
+                    <li><a class="nav-link scrollto" href="/#contact">Talk to Sales</a></li>
+                    <li><a class="nav-link scrollto" href="/#recent-blog-posts">News</a></li>
+                    <li><a class="nav-link scrollto" href="/#values">Features</a></li>
                     <li><a class="getstarted scrollto" href="https://bench.veridat.io/login" target="_blank">Log in</a></li>
                 </ul>
             </nav>
@@ -20,6 +20,7 @@
 
         <f:cObject typoscriptObjectPath="lib.content" />
 
+        <f:if condition="{data.contactform}">
         <section class="contact" id="contact">
             <div class="container" data-aos="fade-up">
                 <div class="row gy-4">
@@ -127,6 +128,7 @@
                 </div>
             </div>
         </section>
+        </f:if>
         <!-- End Contact Section -->
     </main>
 
@@ -140,7 +142,7 @@
                         </a>
                     </div>
                     <div class="col-md-8">
-                        <div class="copyright">&copy; 2021 Veridat, LLC. <span><a href="privacy-policy.html">Privacy Policy </a></span></div>
+                        <div class="copyright">&copy; 2021 Veridat, LLC. <span><a href="/privacy-policy">Privacy Policy </a></span></div>
                     </div>
                 </div>
             </div>

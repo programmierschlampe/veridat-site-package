@@ -10,6 +10,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_veridat_domain_model_valuerow');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_veridat_domain_model_valuebox');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_veridat_domain_model_carouselitem');
     },
     'veridat_site_package'
 );

@@ -13,6 +13,11 @@ class Carouselitem extends AbstractEntity
     public $header = '';
     
     /**
+     * @var int
+     **/
+    public $date = '';
+    
+    /**
      * @var string
      **/
     public $subheader = '';
@@ -56,6 +61,26 @@ class Carouselitem extends AbstractEntity
     public function getHeader()
     {
         return $this->header;
+    }
+    
+    /**
+     * Sets the Date of the item
+     *
+     * @param int $header
+     */
+    public function setDate(int $date)
+    {
+        $this->date = $date;
+    }
+    
+    /**
+     * Gets the Date of the item
+     *
+     * @return int
+     */
+    public function getDate()
+    {
+        return $this->date;
     }
     
     /**

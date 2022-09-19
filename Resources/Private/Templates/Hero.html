@@ -5,29 +5,25 @@
 </f:section>
 <f:section name="Main">
 
-    <section class="hero d-flex align-items-center" id="hero" 
-        <f:for each="{backgroundimages}" as="file" iteration="iter">
-            <f:if condition="{iter.isFirst}">
-                style="background: url(<f:uri.image src='{file.originalFile.uid}' />) top center no-repeat;"
-            </f:if>
-        </f:for>
-    >
+    <section class="hero d-flex align-items-center" id="hero" <f:for each="{backgroundimages}" as="file" iteration="iter"><f:if condition="{iter.isFirst}">style="background: url(<f:uri.image src='{file.originalFile.uid}' />) top center no-repeat;"</f:if></f:for>>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <f:if condition="{data.subheader}||{data.header_link}"><div class="col-lg-6 d-flex flex-column justify-content-center"></f:if>
                     <h1 data-aos="fade-up">{data.header}</h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400">{data.subheader}</h2>
-                    <div data-aos="fade-up" data-aos-delay="600">
-                        <div class="text-center text-lg-start"><a class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center" href="#contact"><span>Get In Touch</span> </a></div>
-                    </div>
-                </div>
-                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                    <f:if condition="{data.subheader}"><h2 data-aos="fade-up" data-aos-delay="400">{data.subheader}</h2></f:if>
+                    <f:if condition="{data.header_link}"><div data-aos="fade-up" data-aos-delay="600">
+                        <div class="text-center text-lg-start">
+                            <f:link.typolink class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center" parameter="{data.header_link}" parts-as="parts">
+                            {parts.title}
+                            </f:link.typolink>
+                        </div>
+                    </div></f:if>
+                <f:if condition="{data.subheader}||{data.header_link}"></div></f:if>
+                <f:if condition="{images}"><div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
                     <f:for each="{images}" as="file" iteration="iter">
-						<f:if condition="{iter.isFirst}">
-                            <img class="img-fluid" src="<f:uri.image src='{file.originalFile.uid}' />" />
-                        </f:if>
-					</f:for>
-                </div>
+                        <f:if condition="{iter.isFirst}"><img class="img-fluid" src="<f:uri.image src='{file.originalFile.uid}' />" /></f:if>
+                    </f:for>
+                </div></f:if>
             </div>
         </div>
     </section>

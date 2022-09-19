@@ -34,6 +34,8 @@ return [
         ],
         'image' => [
             'config' => [
+                'maxitems' => '1',
+                'minitems' => '1',
                 'appearance' => [
                     'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
                     'enabledControls' => [

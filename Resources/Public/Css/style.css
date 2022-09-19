@@ -494,7 +494,7 @@ section {
 
 	font-weight: 400;
 
-	color: #ffffff;
+	color: #2dcb71;
 
 	white-space: nowrap;
 
@@ -902,7 +902,15 @@ section {
 
 }
 
+/*--------------------------------------------------------------
 
+# Article Section
+
+--------------------------------------------------------------*/
+
+section#values, section#article {
+    padding: 115px 0 60px;
+}
 
 /*--------------------------------------------------------------
 
@@ -3194,11 +3202,15 @@ section#hero {
 
 #recent-blog-posts h2 {
 
-	margin-bottom: 40px;
+	/*margin-bottom: 40px;*/
 
 }
 
+#recent-blog-posts .carousel-wrap {
 
+	margin-top: 40px;
+
+}
 
 
 

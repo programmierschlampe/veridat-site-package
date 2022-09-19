@@ -26,7 +26,21 @@
    			<trans-unit id="valuerows.addNewRecord" resname="valuerows.addNewRecord">
 				<source>Add Row</source>
 			</trans-unit>
+
+   			<trans-unit id="contactform.title" resname="contactform.title">
+				<source>Contact Form</source>
+			</trans-unit>
 			
+
+   			<trans-unit id="tabs.carouselitems" resname="tabs.carouselitems">
+				<source>Carousel</source>
+			</trans-unit>
+   			<trans-unit id="valuerows.title" resname="carousel.title">
+				<source>Carousel Items</source>
+			</trans-unit>
+   			<trans-unit id="valuerows.addNewRecord" resname="carouselitem.addNewRecord">
+				<source>Add Carousel Item</source>
+			</trans-unit>
 
    			<trans-unit id="hero.wizard.title">
 				<source>Hero Content Element</source>
@@ -53,6 +67,9 @@
    			<trans-unit id="tx_veridat_domain_model_carouselitem.image">
 				<source>Image</source>
 			</trans-unit>
+   			<trans-unit id="tx_veridat_domain_model_carouselitem.date">
+				<source>Date</source>
+			</trans-unit>
 
    			<trans-unit id="tx_veridat_domain_model_valuerow">
 				<source>Value Row</source>
@@ -63,6 +80,13 @@
    			<trans-unit id="tx_veridat_domain_model_valuerow.selected_valueboxes">
 				<source>Value Boxes</source>
 			</trans-unit>
+   			<trans-unit id="tx_veridat_domain_model_valuerow.label.title">
+				<source>Label</source>
+			</trans-unit>
+   			<trans-unit id="tx_veridat_domain_model_valuerow.label.description">
+				<source>Not Displayed On Website</source>
+			</trans-unit>
+			
 
    			<trans-unit id="tx_veridat_domain_model_valuebox">
 				<source>Value Box</source>

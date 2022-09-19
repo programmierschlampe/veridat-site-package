@@ -79,6 +79,8 @@ class HeroProcessor implements DataProcessorInterface
                     if (!empty($relationTable)) {
                         $fileCollector->addFilesFromRelation($relationTable, $relationField, $cObj->data);
                     }
+                    $additionalData['relationTable'] = $relationTable;
+
                 }
             }
         }

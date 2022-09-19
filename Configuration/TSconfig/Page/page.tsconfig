@@ -43,3 +43,10 @@ mod.wizards.newContentElement.wizardItems.common {
     }
    show := addToList(carousel)}
 }
+
+mod.web_list.hideTables = tx_veridat_domain_model_valuerow,tx_veridat_domain_model_valuebox,tx_veridat_domain_model_carouselitem,page
+
+# ----------------------
+# rte editor restriction
+# ----------------------
+RTE.default.preset = veridat

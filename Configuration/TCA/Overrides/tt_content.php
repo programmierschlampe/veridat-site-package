@@ -124,9 +124,42 @@ call_user_func(
             ],
         );
 
-   		//add columns to TCA
+		$carouselcolumns = array (
+            'carouselitems' => [
+                'exclude' => '0',
+		        'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:carousel.title',
+                'config' => [
+                    'type' => 'inline',
+                    'foreign_table' => 'tx_veridat_domain_model_carouselitem',
+                    'foreign_field' => 'parentid',
+                    'foreign_sortby' => 'sorting_foreign',
+                    'maxitems' => 30,
+                    'appearance' => [
+                        'useSortable' => 1,
+                        'collapseAll' => 1,
+                        'expandSingle' => 1,
+                        'newRecordLinkTitle' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:carouselitem.addNewRecord',
+                        'enabledControls' => [
+                            'delete' => 1,
+                            'dragdrop' => 1,
+                            'hide' => 1,
+                            'info' => 0,
+                            'new' => 1,
+                            'sort' => 1,
+                        ],
+                    ],
+                    'behaviour' => [
+                        'localizeChildrenAtParentLocalization' => 1,    
+                    ],
+                    
+                ],
+            ],
+        );
+
+        //add columns to TCA
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$herocolumns);
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$valuescolumns);
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$carouselcolumns);
 
 		//add form fields to palette
 		//\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content','backgroundimages','backgroundimage','');
@@ -169,6 +202,26 @@ call_user_func(
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
             '
 		);
+        $GLOBALS['TCA']['tt_content']['types']['carousel'] = array(
+            'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general, 
+                    --palette--;;general, 
+                    --palette--;;headers, 
+                --div--;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:tabs.carouselitems, carouselitems,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance, 
+                    --palette--;;frames, 
+                    --palette--;;appearanceLinks, 
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, 
+                    --palette--;;language, 
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, 
+                    --palette--;;hidden, 
+                    --palette--;;access, 
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories, categories, 
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes, rowDescription, 
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+            '
+		);
+
 
     },
 	'veridat_site_package'

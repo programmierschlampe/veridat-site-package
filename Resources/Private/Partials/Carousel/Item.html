@@ -1,0 +1,29 @@
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+<f:if condition="{carouselitems}"><f:for each="{carouselitems}" as="carouselitem">
+                <div class="post-box">
+                    <div class="blog-top">
+                        <span class="post-tag">News</span> 
+                        <span class="post-date">
+                            <f:format.date format="M j, Y">{carouselitem.date}</f:format.date>
+                        </span>
+                    </div>
+                    <div class="post-img">
+                        <f:for each="{carouselitem.images}" as="file" iteration="iter">
+                            <f:if condition="{iter.isFirst}">
+                                <img class="img-fluid" src="<f:uri.image src='{file.uid}' />" />
+                            </f:if>
+                        </f:for>
+                    </div>
+                    <h3 class="post-title">{carouselitem.header}</h3>
+                    <p>
+                    <f:if condition="{carouselitem.subheader}">
+                        <b>{carouselitem.subheader}</b><br/>
+                    </f:if>
+                    {carouselitem.bodytext}</p>
+                    <f:link.typolink class="readmore stretched-link mt-auto" target="_blank" parameter="{carouselitem.header_link}" parts-as="parts"><f:if condition="{parts.title}"><f:then>{parts.title}</f:then><f:else><span>View More</span></f:else></f:if></f:link.typolink>
+                </div>
+</f:for></f:if>
+</f:spaceless>
+</html>
