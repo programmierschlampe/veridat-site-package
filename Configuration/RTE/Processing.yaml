@@ -23,6 +23,7 @@ processing:
     - span
     - strong
     - ul
+    - img
 
   ## Tags that are allowed outside of paragraphs
   ##allowTagsOutside: [address, article, aside, blockquote, footer, header, hr, nav, section, div]
@@ -39,7 +40,8 @@ processing:
     noAttrib: br
     # Can be disabled if you trust ckeditor (If Automatic Content Formatting is enabled, this should be OK)
     # allowTags: %default%
-    denyTags: img
+    #denyTags: img
+    denyTags:
     tags:
       hr:
         allowedAttribs:

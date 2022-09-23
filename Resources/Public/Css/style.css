@@ -1054,7 +1054,7 @@ section#hero {
 
 
 
-#values .row {
+.values .row {
 
 	justify-content: center;
 
@@ -1378,7 +1378,28 @@ section#hero {
 
 }
 
+.values .modal .modal-body img {
 
+	width: 100%!important;
+	height:auto!important;
+	display:block;
+	margin-bottom: 30px;
+
+}
+
+.valueslayout0  {
+
+	background-color: #ffffff;
+	padding-top: 90px;
+
+}
+
+.valueslayout1  {
+
+	background-color: #fafbfe;
+	padding-top: 90px;
+
+}
 
 /*--------------------------------------------------------------
 
@@ -5341,6 +5362,7 @@ section#contact {
 .owl-nav .owl-next {
   right: -30px;
 }
+
 @media screen and (max-width: 600px) {            
     .owl-nav .owl-prev {
       left: -12px;

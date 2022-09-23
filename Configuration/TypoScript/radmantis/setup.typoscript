@@ -32,15 +32,15 @@ page {
     googleFont = https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap
     googleFont.external = 1
 
-    # bootstrapmin = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css
-    # bootstrapmin.external = 1
-    # bootstrapmin.integrity = sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC
-    # bootstrapmin.crossorigin = anonymous
-    bootstrapmininternal = EXT:veridat_site_package/Resources/Public/css/bootstrap.min.css
+    bootstrapmin = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css
+    bootstrapmin.external = 1
+    bootstrapmin.integrity = sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC
+    bootstrapmin.crossorigin = anonymous
+    # bootstrapmininternal = EXT:veridat_site_package/Resources/Public/css/bootstrap.min.css
 
-    # bootstrapicons = https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css
-    # bootstrapicons.external = 1
-    bootstrapiconsinternal = EXT:veridat_site_package/Resources/Public/css/bootstrap-icons.css
+    bootstrapicons = https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css
+    bootstrapicons.external = 1
+    # bootstrapiconsinternal = EXT:veridat_site_package/Resources/Public/css/bootstrap-icons.css
 
     remixicon = EXT:veridat_site_package/Resources/Public/css/remixicon.css
 
@@ -80,11 +80,11 @@ page {
     matchheight = https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js
     matchheight.external = 1
 
-    # bootstrapbundle = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
-    # bootstrapbundle.external = 1
-    # bootstrapbundle.integrity = sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM
-    # bootstrapbundle.crossorigin = anonymous
-    bootstrapbundleinternal = EXT:veridat_site_package/Resources/Public/js/bootstrap.bundle.js
+    bootstrapbundle = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+    bootstrapbundle.external = 1
+    bootstrapbundle.integrity = sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM
+    bootstrapbundle.crossorigin = anonymous
+    # bootstrapbundleinternal = EXT:veridat_site_package/Resources/Public/js/bootstrap.bundle.js
 
     #validate = EXT:veridat_site_package/Resources/Public/js/validate.js
 
@@ -217,7 +217,7 @@ page {
     templateRootPaths < lib.fluidContent.templateRootPaths 
     partialRootPaths < lib.fluidContent.partialRootPaths
     layoutRootPaths < lib.fluidContent.layoutRootPaths
-    file = EXT:veridat_site_package/Resources/Private/Templates/Base.html
+    file = EXT:veridat_site_package/Resources/Private/Templates/Base_Radmantis.html
 
     variables {
       hostname = TEXT
@@ -229,7 +229,7 @@ page {
       companyname = {$company.name}
       companyaddressline1 = {$company.addressline1}
       companyaddressline2 = {$company.addressline2}
-      companyemail = {$company.email}
+      companyemail = {$company.emailaddress}
    }
   }
 

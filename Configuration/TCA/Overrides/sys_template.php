@@ -12,7 +12,17 @@ call_user_func(function () {
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
-        'Configuration/TypoScript',
+        'Configuration/TypoScript/veridat',
         'veridat.io Site Package'
     );
+
+     /**
+     * Add default TypoScript (constants and setup)
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $extensionKey,
+        'Configuration/TypoScript/radmantis',
+        'radmantis.com Site Package'
+    );
+
 });

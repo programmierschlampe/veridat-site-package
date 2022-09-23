@@ -1,17 +1,84 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
     <f:if condition="{valueboxes}">
-        <f:for each="{valueboxes}" as="valuebox">
-            <div class="col-lg-4">
-                <div class="box" data-aos="fade-up" data-aos-delay="200">
-                    <f:for each="{valuebox.images}" as="file" iteration="iter">
-                        <f:if condition="{iter.isFirst}">
-                            <img class="img-fluid" src="<f:uri.image src='{file.uid}' />" />
-                        </f:if>
+        <f:if condition="{valuelayout}==0">
+            <f:then>
+                <f:for each="{valueboxes}" as="valuebox">
+                    <div class="col-lg-4">
+                        <div class="box" data-aos="fade-up" data-aos-delay="200">
+                            <f:for each="{valuebox.images}" as="file" iteration="iter">
+                                <f:if condition="{iter.isFirst}">
+                                    <img class="img-fluid" src="<f:uri.image src='{file.uid}' />" />
+                                </f:if>
+                            </f:for>
+                            <h3>{valuebox.header}</h3>
+                            <p>{valuebox.subheader}</p>
+                            <f:if condition="{valuebox.bodytext}">
+                                <a class="btn btn-outline-success my-xs-3 my-sm-1" data-bs-toggle="modal" href="#bodytextToggle_{valuebox.uid}" role="button">Read more</a>
+                            </f:if>
+                        </div>
+                    </div>
+                    <f:if condition="{valuebox.bodytext}">
+                        <div class="modal fade" id="bodytextToggle_{valuebox.uid}" aria-hidden="true" aria-labelledby="bodytextToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <f:for each="{valuebox.images}" as="file" iteration="iter">
+                                        <f:if condition="{iter.isFirst}">
+                                            <img class="img-fluid" style="width: 100px;" src="<f:uri.image src='{file.uid}' />" />
+                                        </f:if>
+                                    </f:for>
+                                    <h3 class="modal-title" id="exampleModalToggleLabel">{valuebox.header}</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <p><b>{valuebox.subheader}</b></p>
+                                    <f:format.html>{valuebox.bodytext}</f:format.html>
+                                </div>
+                                <!--div class="modal-footer">
+                                </div-->
+                            </div>
+                            </div>
+                        </div>
+                    </f:if>
+                </f:for>
+            </f:then>
+            <f:else if="{valuelayout}==1">
+                <div class="row row-cols-1 row-cols-md-{colcount} g-4">
+                        <f:for each="{valueboxes}" as="valuebox">
+                        <!--div class="card h100">
+                            <f:for each="{valuebox.images}" as="file" iteration="iter">
+                                <f:if condition="{iter.isFirst}">
+                                    <img class="card-img-top" src="<f:uri.image src='{file.uid}' />" alt="{valuebox.header}" />
+                                </f:if>
+                            </f:for>
+                            <div class="card-body">
+                                <h5 class="card-title">{valuebox.header}</h5>
+                                <p class="card-text"><b>{valuebox.subheader}</b></p>
+                                <p class="card-text"><f:format.html>{valuebox.bodytext}</f:format.html></p>
+                            </div>
+                        </div-->
+                        <div class="col mb-3">
+                            <div class="card h-100">
+                                <f:for each="{valuebox.images}" as="file" iteration="iter">
+                                    <f:if condition="{iter.isFirst}">
+                                        <img class="card-img-top" src="<f:uri.image src='{file.uid}' />" alt="{valuebox.header}" />
+                                    </f:if>
+                                </f:for>
+                                <div class="card-body">
+                                    <h5 class="card-title">{valuebox.header}</h5>
+                                    <p class="card-text"><b>{valuebox.subheader}</b></p>
+                                    <p class="card-text"><f:format.html>{valuebox.bodytext}</f:format.html></p>
+                                </div>
+                                <!--div class="card-footer">
+                                  <small class="text-muted">footertext</small>
+                                </div-->
+                            </div>
+                        </div>
                     </f:for>
-                    <h3>{valuebox.header}</h3>
-                    <p>{valuebox.subheader}</p>
                 </div>
-            </div>
-        </f:for>
+            </f:else>
+            <f:else>
+                Template missing for selected Layout
+            </f:else>
+        </f:if>
     </f:if>
 </html>

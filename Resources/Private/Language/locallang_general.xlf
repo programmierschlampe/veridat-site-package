@@ -26,6 +26,18 @@
    			<trans-unit id="valuerows.addNewRecord" resname="valuerows.addNewRecord">
 				<source>Add Row</source>
 			</trans-unit>
+   			<trans-unit id="valuelayout.title" resname="valuelayout.title">
+				<source>Layout</source>
+			</trans-unit>
+   			<trans-unit id="valuelayout.layout0" resname="valuelayout.layout0">
+				<source>Values</source>
+			</trans-unit>
+   			<trans-unit id="valuelayout.layout1" resname="valuelayout.layout1">
+				<source>Team</source>
+			</trans-unit>
+
+		
+
 
    			<trans-unit id="contactform.title" resname="contactform.title">
 				<source>Contact Form</source>
@@ -35,10 +47,10 @@
    			<trans-unit id="tabs.carouselitems" resname="tabs.carouselitems">
 				<source>Carousel</source>
 			</trans-unit>
-   			<trans-unit id="valuerows.title" resname="carousel.title">
+   			<trans-unit id="carousel.title" resname="carousel.title">
 				<source>Carousel Items</source>
 			</trans-unit>
-   			<trans-unit id="valuerows.addNewRecord" resname="carouselitem.addNewRecord">
+   			<trans-unit id="carouselitem.addNewRecord" resname="carouselitem.addNewRecord">
 				<source>Add Carousel Item</source>
 			</trans-unit>
 
@@ -87,7 +99,6 @@
 				<source>Not Displayed On Website</source>
 			</trans-unit>
 			
-
    			<trans-unit id="tx_veridat_domain_model_valuebox">
 				<source>Value Box</source>
 			</trans-unit>

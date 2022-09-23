@@ -67,8 +67,23 @@ class CarouselProcessor implements DataProcessorInterface
             $itemImages = array();
             foreach ($itemFiles as $key => $value) {
                 $itemImage = $value->getOriginalFile()->getProperties();
+                $itemImage["Relation"] = $value;
                 array_push($itemImages,$itemImage);
             }
+            /*
+            // Set the corrected dimensions for each media element
+            foreach ($this->fileObjects as $key => $fileObject) {
+                $mediaHeight = floor($this->equalMediaHeight / $mediaScalingCorrection);
+                $mediaWidth = floor(
+                    $this->getCroppedDimensionalProperty($fileObject, 'width') * ($mediaHeight / max($this->getCroppedDimensionalProperty($fileObject, 'height'), 1))
+                );
+                $this->mediaDimensions[$key] = [
+                    'width' => $mediaWidth,
+                    'height' => $mediaHeight,
+                ];
+            }
+            */
+
             $item['images'] = $itemImages;
             array_push($carouselitems, $item);
         }
@@ -76,5 +91,4 @@ class CarouselProcessor implements DataProcessorInterface
         
         return $processedData;
     }
-    
 }

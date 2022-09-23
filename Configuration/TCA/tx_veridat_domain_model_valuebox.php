@@ -32,6 +32,20 @@ return [
             'exclude' => 1,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.subheader'
         ],
+        'bodytext' => [
+            'config' => [
+                'cols' => 80,
+                'rows' => 15,
+                'search' => [
+                    'andWhere' => "{#CType}='text' OR {#CType}='textpic' OR {#CType}='textmedia'",
+                ],
+                'softref' => 'typolink_tag,email[subst],url',
+                'type' => 'text'
+            ],
+            'exclude' => 1,
+            'l10n_mode' => 'prefixLangTitle',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.text'
+        ],
         'image' => [
             'config' => [
                 'maxitems' => '1',
@@ -124,6 +138,15 @@ return [
         ],
     ],
     'types' => [
-        '0' => ['showitem' => 'header, subheader, bodytext, image, hidden']
+        '0' => [
+            'showitem' => 'header, subheader, bodytext, image, hidden',
+            'columnsOverrides' => [
+                'bodytext' => [
+                    'config' => [
+                        'enableRichtext' => 1,
+                    ],
+                ],
+            ],
+        ],
     ]
 ];

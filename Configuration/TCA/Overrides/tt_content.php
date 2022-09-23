@@ -122,6 +122,24 @@ call_user_func(
                     
                 ],
             ],
+            'valuelayout' => [
+                'exclude' => '0',
+		        'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:valuelayout.title',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'items' => [
+                        '0' => [
+                            '0' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:valuelayout.layout0',
+                            '1' => 0
+                        ],
+                        '1' => [
+                            '0' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:valuelayout.layout1',
+                            '1' => 1
+                        ]
+                    ],
+                ],
+            ],
         );
 
 		$carouselcolumns = array (
@@ -188,7 +206,7 @@ call_user_func(
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general, 
                     --palette--;;general, 
                     --palette--;;headers, 
-                --div--;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:tabs.valuerows, valuerows,
+                --div--;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_general.xlf:tabs.valuerows, valuerows, valuelayout,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance, 
                     --palette--;;frames, 
                     --palette--;;appearanceLinks, 
@@ -221,7 +239,6 @@ call_user_func(
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
             '
 		);
-
 
     },
 	'veridat_site_package'

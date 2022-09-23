@@ -8,7 +8,7 @@
  */
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Sitepackage for website www.veridat.io',
+    'title' => 'Sitepackage for websites veridat, radmantis, juvatech',
     'description' => 'Site Package with Scripts, Templates and Resources ',
     'category' => 'templates',
     'state' => 'stable',
@@ -31,5 +31,5 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 1,
-    'version' => '11.0.11',
+    'version' => '11.1.0',
 ];

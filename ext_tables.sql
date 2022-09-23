@@ -9,6 +9,7 @@ CREATE TABLE pages (
 CREATE TABLE tt_content (
     backgroundimage int(11) unsigned NOT NULL DEFAULT '0',
     valuerows int(11) unsigned NOT NULL DEFAULT '0',
+    valuelayout smallint(5) unsigned NOT NULL DEFAULT '0',
     carouselitems int(11) unsigned NOT NULL DEFAULT '0',
 );
 
@@ -36,6 +37,7 @@ CREATE TABLE tx_veridat_domain_model_valuebox (
 
 	header varchar(255) DEFAULT '' NOT NULL,
     subheader varchar(255) DEFAULT '' NOT NULL,
+  	bodytext mediumtext,
 	image int(11) unsigned DEFAULT '0' NOT NULL,
 
     sorting_foreign int(11) DEFAULT '0' NOT NULL,
@@ -46,6 +48,7 @@ CREATE TABLE tx_veridat_domain_model_valuebox (
     KEY parent (pid),
     KEY boxparent (parentid)
 );
+
 
 CREATE TABLE tx_veridat_domain_model_carouselitem (
     uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
