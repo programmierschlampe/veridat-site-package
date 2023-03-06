@@ -218,7 +218,6 @@ page {
     partialRootPaths < lib.fluidContent.partialRootPaths
     layoutRootPaths < lib.fluidContent.layoutRootPaths
     file = EXT:veridat_site_package/Resources/Private/Templates/Base_Veridat.html
-
     variables {
       hostname = TEXT
       hostname.stdWrap.data = getIndpEnv:HTTP_HOST
@@ -226,10 +225,10 @@ page {
     }
     settings {
       # Get the copyright year from a TypoScript constant.
-      companyname = {$company.name}
-      companyaddressline1 = {$company.addressline1}
-      companyaddressline2 = {$company.addressline2}
-      companyemail = {$company.emailaddress}
+      name = {$company.name}
+      addressline1 = {$company.addressline1}
+      addressline2 = {$company.addressline2}
+      emailaddress = {$company.emailaddress}
    }
   }
 

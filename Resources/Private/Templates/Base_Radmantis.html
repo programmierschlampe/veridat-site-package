@@ -31,7 +31,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <h4 style="margin-bottom: 0;">Contact Information</h4>
-                                    <h2>{settings.companyname}</h2>
+                                    <h2>{settings.name}</h2>
                                 </div>
                             </div>
                             <div class="row">
@@ -44,7 +44,7 @@
                                             <div class="col-sm-9">
                                                 <div class="icon"></div>
                                                 <h3 class="text-uppercase">Address</h3>
-                                                <p>{settings.companyaddressline1}<br/>{settings.companyaddressline2}</p>
+                                                <p>{settings.addressline1}<br/>{settings.addressline2}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                                             <div class="col-sm-9">
                                                 <div class="icon"></div>
                                                 <h3 class="text-uppercase">Email</h3>
-                                                <p>{settings.companyemail}</p>
+                                                <p><f:link.email email="{settings.emailaddress}" /></p>
                                             </div>
                                         </div>
                                     </div>

@@ -3,12 +3,15 @@
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:veridat_site_package/Resources/Private/Language/locallang_general.xlf:tx_veridat_domain_model_carouselitem',
-        'label' => 'header',
+        'label' => 'date',
+        'label_alt' => 'header',
+		'label_alt_force' => 1,
         'delete' => 'deleted',
         'iconfile' => 'EXT:veridat_site_package/Resources/Public/Icons/Carouselitem.svg',
         'searchFields' => 'header,subheader,bodytext',
 	    'enablecolumns' => [
 		    'disabled' => 'hidden',
+		    'starttime' => 'date',
 	    ]
     ],
     'columns' => [
