@@ -22,7 +22,9 @@
                         <b>{carouselitem.subheader}</b><br/>
                     </f:if>
                     {carouselitem.bodytext}</p>
-                    <f:link.typolink class="readmore stretched-link mt-auto" target="_blank" parameter="{carouselitem.header_link}" parts-as="parts"><f:if condition="{parts.title}"><f:then>{parts.title}</f:then><f:else><span>View More</span></f:else></f:if></f:link.typolink>
+					<f:if condition="{carouselitem.header_link}">
+						<f:link.typolink class="readmore stretched-link mt-auto" target="_blank" parameter="{carouselitem.header_link}" parts-as="parts"><f:if condition="{parts.title}"><f:then>{parts.title}</f:then><f:else><span>View More</span></f:else></f:if></f:link.typolink>
+                    </f:if>
                 </div>
 </f:for></f:if>
 </f:spaceless>
